@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<layout version="0.1.0">
+    <orderexport_adminhtml_export_history>
+        <reference name="content">
+            <block type="orderexport/adminhtml_export" name="orderexport"/>
+        </reference>
+    </orderexport_adminhtml_export_history>
+</layout>

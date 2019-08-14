@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Unicode Systems
+ * @category   Uni
+ * @package    Uni_Orderexport
+ * @copyright  Copyright (c) 2010-2011 Unicode Systems. (http://www.unicodesystems.in)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <menu>
+        <sales translate="title" module="sales">
+            <title>Sales</title>
+            <sort_order>20</sort_order>
+            <depends>
+                <module>Mage_Sales</module>
+            </depends>
+            <children>
+                <sales_export translate="title" module="orderexport">
+                    <title>Sales Export</title>
+                    <sort_order>50</sort_order>
+                    <children>
+                        <manual_export translate="title" module="orderexport">
+                            <title>Manual Export</title>
+                            <sort_order>0</sort_order>
+                            <action>orderexport/adminhtml_salesexport/manualExport</action>
+                        </manual_export>
+
+                        <execution_history translate="title" module="orderexport">
+                            <title>Execution History</title>
+                            <sort_order>2</sort_order>
+                            <action>orderexport/adminhtml_export/history</action>
+                        </execution_history>
+
+                    </children>
+                </sales_export>
+            </children>
+        </sales>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <orderexport translate="title" module="orderexport">
+                                        <title>Order Export Section</title>
+                                        <sort_order>0</sort_order>
+                                    </orderexport>
+                                     <ftpexport translate="title" module="orderexport">
+                                        <title>FTP settings</title>
+                                        <sort_order>1</sort_order>
+                                    </ftpexport>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

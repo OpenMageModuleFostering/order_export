@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Order_Export",
+    "type": "magento-module",
+    "license": "Open-Software-License-(OSL)",
+    "homepage": "",
+    "description": "Exporting orders/invoices/shipments/creditmemos/customer into CSV/XML formats.",
+    "authors": [
+    {
+        "name": "Unicode Systems",
+        "email": "magento@unicodesystems.in"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

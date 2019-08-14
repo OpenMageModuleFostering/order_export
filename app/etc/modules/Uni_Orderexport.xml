@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Uni_Orderexport>
+      <active>1</active>
+      <codePool>community</codePool>
+      <version>0.1.0</version>
+      <depends>Mage_Adminhtml</depends>
+    </Uni_Orderexport>
+  </modules>
+</config>

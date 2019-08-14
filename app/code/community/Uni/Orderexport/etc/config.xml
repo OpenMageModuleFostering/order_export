@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Unicode Systems
+ * @category   Uni
+ * @package    Uni_Orderexport
+ * @copyright  Copyright (c) 2010-2011 Unicode Systems. (http://www.unicodesystems.in)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Uni_Orderexport>
+            <version>0.1.0</version>
+        </Uni_Orderexport>
+    </modules>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Uni_Orderexport before="Mage_Adminhtml">Uni_Orderexport</Uni_Orderexport>
+                    </modules>
+                </args>
+            </adminhtml>
+            <orderexport>
+                <use>admin</use>    
+                <args>
+                    <module>Uni_Orderexport</module>
+                    <frontName>orderexport</frontName>
+                </args>
+            </orderexport>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <orderexport>
+                    <file>orderexport.xml</file>
+                </orderexport>
+            </updates>
+        </layout>
+    </adminhtml>
+    <global>
+        <template>
+            <email>
+                <orderexport_email_email_template translate="label" module="orderexport">
+                    <label>Order Export Form</label>
+                    <file>orderexport_form.html</file>
+                    <type>html</type>
+                </orderexport_email_email_template>
+            </email>
+        </template>
+        <models>
+            <orderexport>
+                <class>Uni_Orderexport_Model</class>
+                <resourceModel>orderexport_mysql4</resourceModel>
+            </orderexport>
+            <orderexport_mysql4>
+                <class>Uni_Orderexport_Model_Mysql4</class>
+                <entities>
+                    <orderexport>
+                        <table>exporthistory</table>
+                    </orderexport>
+                </entities>
+            </orderexport_mysql4>
+        </models>
+        <resources>
+            <orderexport_setup>
+                <setup>
+                    <module>Uni_Orderexport</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </orderexport_setup>
+            <orderexport_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </orderexport_write>
+            <orderexport_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </orderexport_read>
+        </resources>
+        <helpers>
+            <orderexport>
+                <class>Uni_Orderexport_Helper</class>
+            </orderexport>
+        </helpers>
+        <blocks>
+            <orderexport>
+                <class>Uni_Orderexport_Block</class>
+            </orderexport>
+            <adminhtml>
+                <rewrite>
+                    <sales_order_grid>Uni_Orderexport_Block_Adminhtml_Sales_Order_Grid</sales_order_grid>
+                </rewrite>
+            </adminhtml>
+            <adminhtml>
+                <rewrite>
+                    <sales_creditmemo_grid>Uni_Orderexport_Block_Adminhtml_Sales_Creditmemo_Grid</sales_creditmemo_grid>
+                </rewrite>
+            </adminhtml>
+            <adminhtml>
+                <rewrite>
+                    <sales_invoice_grid>Uni_Orderexport_Block_Adminhtml_Sales_Invoice_Grid</sales_invoice_grid>
+                </rewrite>
+            </adminhtml>
+            <adminhtml>
+                <rewrite>
+                    <sales_shipment_grid>Uni_Orderexport_Block_Adminhtml_Sales_Shipment_Grid</sales_shipment_grid>
+                </rewrite>
+            </adminhtml>
+            <adminhtml>
+                <rewrite>
+                    <customer_grid>Uni_Orderexport_Block_Adminhtml_Customer_Grid</customer_grid>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+    </global>
+</config> 
