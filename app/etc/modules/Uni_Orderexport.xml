@@ -1,11 +1,18 @@
 <?xml version="1.0"?>
+<!--/**
+* Unicode Systems
+* @category   Uni
+* @package    Uni_Bargain
+* @copyright  Copyright (c) 2014-2015 Unicode Systems. (http://www.unicodesystems.in)
+* @license    http://opensource.org/licenses/osl-3.0.php Open Software License (OSL)
+*/-->
 <config>
-  <modules>
-    <Uni_Orderexport>
-      <active>1</active>
-      <codePool>community</codePool>
-      <version>0.1.0</version>
-      <depends>Mage_Adminhtml</depends>
-    </Uni_Orderexport>
-  </modules>
+    <modules>
+        <Uni_Orderexport>
+            <active>1</active>
+            <codePool>community</codePool>
+            <version>0.1.0</version>
+            <depends>Mage_Adminhtml</depends>
+        </Uni_Orderexport>
+    </modules>
 </config>

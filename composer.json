@@ -3,7 +3,7 @@
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
-    "description": "Exporting orders/invoices/shipments/creditmemos/customer into CSV/XML formats.",
+    "description": " The "Sales Export Extension" extension enable Exporting sales and Customer into CSV/XML formats.",
     "authors": [
     {
         "name": "Unicode Systems",
