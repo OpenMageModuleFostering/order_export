@@ -1,16 +1,5 @@
 {
-    "name": "OpenMageModuleFostering/Order_Export",
-    "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
-    "homepage": "",
-    "description": " The "Sales Export Extension" extension enable Exporting sales and Customer into CSV/XML formats.",
-    "authors": [
-    {
-        "name": "Unicode Systems",
-        "email": "magento@unicodesystems.in"
-    }
-],
-    "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+    "keywords": [
+        "openmage-module"
+    ]
 }
